@@ -20,7 +20,7 @@ Currently everyone in FUSION can read all repositories by default. You need to s
 
 First, create your local repository doing the usual:
 
-```
+```bash
 git init
 touch README.md
 git add README.md
@@ -51,13 +51,13 @@ You want the second block: **...or push an existing repository from the command 
 
 As you work on your project, you can stage your files by doing:
 
-```
+```bash
 git add some_dir/myfile.txt
 ```
 
 This adds the file (or the changes in the file, if it was previously added before) to git's index. Now you can do:
 
-```
+```bash
 git commit
 # or git commit -m 'message'
 ```
@@ -70,7 +70,7 @@ The reason you may want to git add files separately, rather than using `git comm
 
 If you've followed the instructions above, your repository is already set to push changes to github. After making a commit (or you could wait until you've made multiple commits if you'd like), you just:
 
-```
+```bash
 git push
 ```
 
@@ -109,7 +109,7 @@ Typical workflow:
 2. A maintainer creates a master repository for the entire project, for example "muscle-paper-2017".
 3. Periodically at paper freezes, the maintainer would pull the other repositories in:
 
-    ```
+    ```bash
     # First-time setup: add remotes
     git remote add fume git@github.com:fusion-study/FuMe.git
     git remote add gwas_db git@github.com:fusion-study/gwas_database.git
@@ -155,7 +155,7 @@ Typical workflow:
 
 4. Commit changes as usual, either with `git commit -a` or manually stage each of your files and commit, like:
 
-    ```
+    ```bash
     # You probably want to make a subdirectory to work under for your particular analysis
     mkdir eqtl_analysis
     touch eqtl_analysis/my_script.py
@@ -167,7 +167,7 @@ Typical workflow:
 
 6. During a paper or version freeze, the repository maintainer can merge each branch into master.
 
-    ```
+    ```bash
     git checkout master
     git merge project1_branch project2_branch project3_branch
     git tag -a "1.0" -m "Release 1.0 - ASHG 2017"
@@ -185,7 +185,7 @@ In general it isn't a great idea to commit large files to repositories. Github a
 
 One way around this is to separately store the large files somewhere, perhaps on snowwhite somewhere under `/home/FUSION/`. Then provide instructions for how to grab those files. For example, you could include this command in your README, or a script in your repo:
 
-```
+```bash
 # Remove --dry-run after running this command to verify the paths look correct
 rsync -aviH --progress --dry-run \
   user@snowwhite:/home/FUSION/my_analysis/ \
