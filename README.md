@@ -16,6 +16,10 @@ Currently everyone in FUSION can read all repositories by default. You need to s
 
 ## Repositories
 
+## Updating git
+
+The newer versions of git make a number of quality of life improvements. You can update to a newer version of git on linux by using [linuxbrew](https://linuxbrew.sh) or on Mac by using [homebrew](https://brew.sh/). There are also some pre-compiled [git installers](https://git-scm.com/downloads) available as well.
+
 ### Creating
 
 First, create your local repository doing the usual:
@@ -213,9 +217,13 @@ git annex is another good option for tracking large files in a repository, but i
 
 Borg is pretty great: it is secure, de-duplicates and compresses (and can also encrypt), and versions data automatically. The repository with all versions of the data is easy to transfer (just copy it). The downside is a slight learning curve, and that it stores files in its own binary format, so inspecting the archives always requires the use of CLI tools (fairly easy in practice.)
 
-## Updating git
+## Distributing an entire project/paper
 
-The newer versions of git make a number of quality of life improvements. You can update to a newer version of git on linux by using [linuxbrew](https://linuxbrew.sh) or on Mac by using [homebrew](https://brew.sh/). There are also some pre-compiled [git installers](https://git-scm.com/downloads) available as well.
+Somewhat of an open question currently. Some options: 
+
+1. Pack all data + paper repository (which includes code/analysis scripts) into a single container (Docker, Singularity?) and provide the container as the distributable. 
+2. Pack paper repository into a container, but have a script included whose job it is to download the relevant data from some source. 
+3. Other options?
 
 ## FAQ
 
