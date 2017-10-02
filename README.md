@@ -1,5 +1,7 @@
 # Using Github for FUSION Projects
 
+You can view a [much nicer version of this document](https://cdn.rawgit.com/welchr/fusion_github_test/a99d4e0c/README.html) or continue reading here. 
+
 ## Organization
 
 Code will be stored in repositories under the FUSION github organization, located here:
@@ -91,15 +93,18 @@ Our papers in the past have been typically been individual analysts (or very sma
 Each analyst (or small team) maintains their own repository per analysis. This results in maybe 5-10 repositories per paper. We create one "master" repository that represents the paper, and the maintainer of that repository will pull in changes from each of the repositories that represent the paper analyses during freezes.
 
 Advantages:
+
 * Easier for analysts, since it's (mostly) single-developer workflow.
 * Don't need to know anything about branches, or merging. Just commit your changes to your project and push them to github.
 
 Disadvantages:
+
 * Multiple repositories that clutter up the organization (not so bad really.)
 * Need to know which repository is the master/paper one.
 * Maintainer needs to understand git subtrees.
 
 Typical workflow:
+
 1. Analysts create repositories and push them to github as usual (see above.)
 2. A maintainer creates a master repository for the entire project, for example "muscle-paper-2017".
 3. Periodically at paper freezes, the maintainer would pull the other repositories in:
@@ -126,13 +131,16 @@ Typical workflow:
 One repository for the paper, and all analysts commit their work on separate branches, which later can be merged into the master branch during freezes.
 
 Advantages:
+
 * Single repository, everything in one place.
 
 Disadvantages:
+
 * Requires understanding of branching/merging. Someone with write access could potentially push on the wrong branch, or to master, and disrupt others.
 * Commit/branch history gets pretty ugly. Which is okay as long as you don't look at it...
 
 Typical workflow:
+
 1. User clones the central repository by doing:
 
     `git clone <repository URL>`
