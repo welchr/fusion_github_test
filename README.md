@@ -106,7 +106,9 @@ Disadvantages:
 Typical workflow:
 
 1. Analysts create repositories and push them to github as usual (see above.)
+
 2. A maintainer creates a master repository for the entire project, for example "muscle-paper-2017".
+
 3. Periodically at paper freezes, the maintainer would pull the other repositories in:
 
     ```bash
