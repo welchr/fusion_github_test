@@ -199,7 +199,7 @@ Git LFS seems like the worst of the possible options, I only mention it to remin
 
 Dat looks like a great way to share data, and it is secure, but there is no versioning built in.
 
-Borg is pretty great: it is secure, de-duplicates and versions data automatically, the repository with all versions of the data is easy to transfer (just copy it). The downside is the learning curve, and that it stores files in its own binary format, so inspecting the archives always requires the use of CLI tools (which must also be installed separately, though this is trivial.)
+Borg is pretty great: it is secure, de-duplicates and versions data automatically, and the repository with all versions of the data is easy to transfer (just copy it). The downside is the learning curve, and that it stores files in its own binary format, so inspecting the archives always requires the use of CLI tools (which must also be installed separately, though this is trivial.)
 
 ## Updating git
 
