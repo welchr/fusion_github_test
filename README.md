@@ -1,6 +1,6 @@
 # Using Github for FUSION Projects
 
-You can view a [much nicer version of this document](https://cdn.rawgit.com/welchr/fusion_github_test/a99d4e0c/README.html) or continue reading here. 
+You can view a [much nicer version of this document](https://rawgit.com/welchr/fusion_github_test/master/README.html) or continue reading here. 
 
 ## Organization
 
