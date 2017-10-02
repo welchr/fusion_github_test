@@ -1,4 +1,4 @@
-# FUSION Github Strategy
+# Using Github for FUSION Projects
 
 ## Organization
 
