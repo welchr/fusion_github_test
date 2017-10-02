@@ -135,35 +135,35 @@ Disadvantages:
 Typical workflow:
 1. User clones the central repository by doing:
 
-  `git clone <repository URL>`
+    `git clone <repository URL>`
 
 2. Create a new branch to work on:
 
-  `git checkout -b my_analysis`
+    `git checkout -b my_analysis`
 
 3. Setup your branch to push changes to Github:
 
-  `git push --set-upstream origin my_analysis`
+    `git push --set-upstream origin my_analysis`
 
 4. Commit changes as usual, either with `git commit -a` or manually stage each of your files and commit, like:
 
-  ```
-  # You probably want to make a subdirectory to work under for your particular analysis
-  mkdir eqtl_analysis
-  touch eqtl_analysis/my_script.py
-  git add eqtl_analysis/my_script.py
-  git commit -m "My changes are..."
-  ```
+    ```
+    # You probably want to make a subdirectory to work under for your particular analysis
+    mkdir eqtl_analysis
+    touch eqtl_analysis/my_script.py
+    git add eqtl_analysis/my_script.py
+    git commit -m "My changes are..."
+    ```
 
 5. Later, maybe after a few more commits, push your changes back to github by doing `git push`.
 
 6. During a paper or version freeze, the repository maintainer can merge each branch into master.
 
-  ```
-  git checkout master
-  git merge project1_branch project2_branch project3_branch
-  git tag -a "1.0" -m "Release 1.0 - ASHG 2017"
-  ```
+    ```
+    git checkout master
+    git merge project1_branch project2_branch project3_branch
+    git tag -a "1.0" -m "Release 1.0 - ASHG 2017"
+    ```
 
 ## Software
 
