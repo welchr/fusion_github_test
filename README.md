@@ -104,22 +104,22 @@ Typical workflow:
 2. A maintainer creates a master repository for the entire project, for example "muscle-paper-2017".
 3. Periodically at paper freezes, the maintainer would pull the other repositories in:
 
-  ```
-  # First-time setup: add remotes
-  git remote add fume git@github.com:fusion-study/FuMe.git
-  git remote add gwas_db git@github.com:fusion-study/gwas_database.git
+    ```
+    # First-time setup: add remotes
+    git remote add fume git@github.com:fusion-study/FuMe.git
+    git remote add gwas_db git@github.com:fusion-study/gwas_database.git
 
-  # First-time setup: merge in subtrees
-  git subtree add --squash --prefix gwas_db/ gwas_db master
-  git subtree add --squash --prefix fume/ fume master
+    # First-time setup: merge in subtrees
+    git subtree add --squash --prefix gwas_db/ gwas_db master
+    git subtree add --squash --prefix fume/ fume master
 
-  # In the future, during a freeze:
-  git subtree pull --squash --prefix gwas_db/ gwas_db master
-  git subtree pull --squash --prefix fume/ fume master
+    # In the future, during a freeze:
+    git subtree pull --squash --prefix gwas_db/ gwas_db master
+    git subtree pull --squash --prefix fume/ fume master
 
-  # Tag this version
-  git tag -a "1.0" -m "Release 1.0 (ASHG 2017)"
-  ```
+    # Tag this version
+    git tag -a "1.0" -m "Release 1.0 (ASHG 2017)"
+    ```
 
 ### Workflow 2: one repository
 
