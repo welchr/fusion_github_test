@@ -195,11 +195,13 @@ Some possible tools for getting a better handle on distributing/versioning data:
 * [dat](https://github.com/datproject/dat)
 * [borg](https://borgbackup.readthedocs.io/en/stable/quickstart.html)
 
-Git LFS seems like the worst of the possible options, I only mention it to remind us take another look again in the future.
+Borg looks like the best option right now. Git LFS seems like the worst of the possible options, I only mention it to remind us take another look again in the future.
 
 Dat looks like a great way to share data, and it is secure, but there is no versioning built in.
 
-Borg is pretty great: it is secure, de-duplicates and versions data automatically, and the repository with all versions of the data is easy to transfer (just copy it). The downside is the learning curve, and that it stores files in its own binary format, so inspecting the archives always requires the use of CLI tools (which must also be installed separately, though this is trivial.)
+git annex is another good option for tracking large files in a repository, but it is complicated and has probably the steepest learning curve. It does not de-duplicate data, or do compression/encryption - this has to be done by the user before including the files.
+
+Borg is pretty great: it is secure, de-duplicates and compresses (and can also encrypt), and versions data automatically. The repository with all versions of the data is easy to transfer (just copy it). The downside is a slight learning curve, and that it stores files in its own binary format, so inspecting the archives always requires the use of CLI tools (fairly easy in practice.)
 
 ## Updating git
 
