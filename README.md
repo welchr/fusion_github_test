@@ -16,7 +16,7 @@ Currently everyone in FUSION can read all repositories by default. You need to s
 
 ## Repositories
 
-## Updating git
+### Updating git
 
 The newer versions of git make a number of quality of life improvements. You can update to a newer version of git on linux by using [linuxbrew](https://linuxbrew.sh) or on Mac by using [homebrew](https://brew.sh/). There are also some pre-compiled [git installers](https://git-scm.com/downloads) available as well.
 
