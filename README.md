@@ -181,7 +181,7 @@ One way around this is to separately store the large files somewhere, perhaps on
 # Remove --dry-run after running this command to verify the paths look correct
 rsync -aviH --progress --dry-run \
   user@snowwhite:/home/FUSION/my_analysis/ \
-	/path/to/local/my_analysis/
+  /path/to/local/my_analysis/
 ```
 
 Versioning data in this way needs to be done manually, unfortunately. You could name files by their version, or directories.
@@ -190,10 +190,10 @@ Versioning data in this way needs to be done manually, unfortunately. You could 
 
 Some possible tools for getting a better handle on distributing/versioning data:
 
-	* [git annex](https://git-annex.branchable.com/tips/centralized_git_repository_tutorial/on_GitHub/)
-	* [git lfs](https://git-lfs.github.com/)
-	* [dat](https://github.com/datproject/dat)
-	* [borg](https://borgbackup.readthedocs.io/en/stable/quickstart.html)
+* [git annex](https://git-annex.branchable.com/tips/centralized_git_repository_tutorial/on_GitHub/)
+* [git lfs](https://git-lfs.github.com/)
+* [dat](https://github.com/datproject/dat)
+* [borg](https://borgbackup.readthedocs.io/en/stable/quickstart.html)
 
 Git LFS seems like the worst of the possible options, I only mention it to remind us take another look again in the future.
 
