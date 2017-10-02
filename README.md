@@ -23,11 +23,11 @@ git commit -m "Start of repository"
 
 Now create a repository to push to on the [github organization](https://github.com/fusion-study). Hit the "New" button in the upper-right:
 
-![](07D129EA-F279-4B61-8CB2-A1A8D5096907.png)
+![](images/create_repo.png)
 
 You should see:
 
-![](8A3B7431-AFE3-41FD-90DE-85065F4624AF.png)
+![](images/repo_setup.png)
 
 Choose any name for your repository. Perhaps include a prefix if this repository belongs to a larger project. For example `tissue-eqtl-analysis` and `tissue-methylation`. You likely **do not** want to include version, freeze, or date in your repository name - these bits of information are all easy to put in the repository itself as you will see below.
 
@@ -35,7 +35,7 @@ The other defaults are likely what you want. Start with a private repository (yo
 
 Once you create the repository, now you should see:
 
-![](0D14C181-554A-437C-99CC-F6C4C4A95D73.png)
+![](images/after_create.png)
 
 I did this on my own github account, so the links will have "welchr" in them, your links will be different.
 
