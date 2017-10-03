@@ -198,7 +198,7 @@ rsync -aviH --progress --dry-run \
   /path/to/local/my_analysis/
 ```
 
-Versioning data in this way needs to be done manually. You could name files or directories with their version and/or date. For our use case, we tend to have only very few versions of our data (freeze 4, freeze 5, etc.) so this isn't really much of a problem. 
+Versioning data in this way needs to be done manually. You could name files or directories with their version and/or date. For our use case, we tend to have only very few versions of our data (freeze 4, freeze 5, etc.)
 
 ### Notes for future improvement
 
