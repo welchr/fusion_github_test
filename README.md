@@ -198,7 +198,7 @@ rsync -aviH --progress --dry-run \
   /path/to/local/my_analysis/
 ```
 
-Versioning data in this way needs to be done manually, unfortunately. You could name files by their version, or directories.
+Versioning data in this way needs to be done manually. You could name files by their version, or directories. For our use case, we tend to have only very few versions of our data (freeze 4, freeze 5, etc.) so this isn't really much of a problem. 
 
 ### Notes for future improvement
 
@@ -209,13 +209,13 @@ Some possible tools for getting a better handle on distributing/versioning data:
 * [dat](https://github.com/datproject/dat)
 * [borg](https://borgbackup.readthedocs.io/en/stable/quickstart.html)
 
-Borg looks like the best option right now. Git LFS seems like the worst of the possible options, I only mention it to remind us take another look again in the future.
+Git LFS seems like the worst of the possible options, I only mention it to remind us take another look again in the future.
 
-Dat looks like a great way to share data, and it is secure, but there is no versioning built in.
+Dat looks like a great way to share data, and it is secure, but there is no versioning built in (which probably isn't much of an issue - see above.)
 
-git annex is another good option for tracking large files in a repository, but it is complicated and has probably the steepest learning curve. It does not de-duplicate data, or do compression/encryption - this has to be done by the user before including the files.
+git annex is another good option for tracking large files in a repository, but it is complicated and has probably the steepest learning curve. 
 
-Borg is pretty great: it is secure, de-duplicates and compresses (and can also encrypt), and versions data automatically. The repository with all versions of the data is easy to transfer (just copy it). The downside is a slight learning curve, and that it stores files in its own binary format, so inspecting the archives always requires the use of CLI tools (fairly easy in practice.)
+Borg is pretty great: it de-duplicates, compresses, encrypts, and versions data automatically. The repository with all versions of the data is easy to transfer (just copy it). Downsides: a slight learning curve, it stores files in its own binary format (inspecting the archives requires the use of CLI tools), and you need to have 2 copies of your data: the copy in use, and the versions stored in the borg repository. 
 
 ## Distributing an entire project/paper
 
