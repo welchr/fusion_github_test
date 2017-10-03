@@ -6,7 +6,7 @@ You can view a [much nicer version of this document](https://rawgit.com/welchr/f
 
 Code will be stored in repositories under the FUSION github organization, located here:
 
-https://github.com/fusion-study
+[https://github.com/fusion-study](https://github.com/fusion-study)
 
 Please send an email to [Ryan](mailto:welchr@umich.edu) or [Peggy](mailto:ppwhite@umich.edu) if you need an invite.
 

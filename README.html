@@ -50,6 +50,7 @@ code > span.in { color: #008000; } /* Information */
 <li><a href="#organization">Organization</a></li>
 <li><a href="#permissions">Permissions</a></li>
 <li><a href="#repositories">Repositories</a><ul>
+<li><a href="#updating-git">Updating git</a></li>
 <li><a href="#creating">Creating</a></li>
 <li><a href="#committing-changes-to-code">Committing changes to code</a></li>
 <li><a href="#pushing-changes-to-github">Pushing changes to Github</a></li>
@@ -63,20 +64,22 @@ code > span.in { color: #008000; } /* Information */
 <li><a href="#large-files">Large files</a><ul>
 <li><a href="#notes-for-future-improvement">Notes for future improvement</a></li>
 </ul></li>
-<li><a href="#updating-git">Updating git</a></li>
+<li><a href="#distributing-an-entire-projectpaper">Distributing an entire project/paper</a></li>
 <li><a href="#faq">FAQ</a></li>
 </ul></li>
 </ul>
 </nav>
 <h1 id="using-github-for-fusion-projects">Using Github for FUSION Projects</h1>
-<p>You can view a <a href="https://cdn.rawgit.com/welchr/fusion_github_test/a99d4e0c/README.html">much nicer version of this document</a> or continue reading here.</p>
+<p>You can view a <a href="https://rawgit.com/welchr/fusion_github_test/master/README.html">much nicer version of this document</a> or continue reading here.</p>
 <h2 id="organization">Organization</h2>
 <p>Code will be stored in repositories under the FUSION github organization, located here:</p>
-<p>https://github.com/fusion-study</p>
+<p><a href="https://github.com/fusion-study" class="uri">https://github.com/fusion-study</a></p>
 <p>Please send an email to <a href="mailto:welchr@umich.edu">Ryan</a> or <a href="mailto:ppwhite@umich.edu">Peggy</a> if you need an invite.</p>
 <h2 id="permissions">Permissions</h2>
 <p>Currently everyone in FUSION can read all repositories by default. You need to specifically give people write permission on repositories you create. Since we’re relatively small, we can likely just add each person as needed. Teams can also be created as well.</p>
 <h2 id="repositories">Repositories</h2>
+<h3 id="updating-git">Updating git</h3>
+<p>The newer versions of git make a number of quality of life improvements. You can update to a newer version of git on linux by using <a href="https://linuxbrew.sh">linuxbrew</a> or on Mac by using <a href="https://brew.sh/">homebrew</a>. There are also some pre-compiled <a href="https://git-scm.com/downloads">git installers</a> available as well.</p>
 <h3 id="creating">Creating</h3>
 <p>First, create your local repository doing the usual:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">git</span> init
@@ -207,8 +210,13 @@ code > span.in { color: #008000; } /* Information */
 <p>Dat looks like a great way to share data, and it is secure, but there is no versioning built in.</p>
 <p>git annex is another good option for tracking large files in a repository, but it is complicated and has probably the steepest learning curve. It does not de-duplicate data, or do compression/encryption - this has to be done by the user before including the files.</p>
 <p>Borg is pretty great: it is secure, de-duplicates and compresses (and can also encrypt), and versions data automatically. The repository with all versions of the data is easy to transfer (just copy it). The downside is a slight learning curve, and that it stores files in its own binary format, so inspecting the archives always requires the use of CLI tools (fairly easy in practice.)</p>
-<h2 id="updating-git">Updating git</h2>
-<p>The newer versions of git make a number of quality of life improvements. You can update to a newer version of git on linux by using <a href="https://linuxbrew.sh">linuxbrew</a> or on Mac by using <a href="https://brew.sh/">homebrew</a>. There are also some pre-compiled <a href="https://git-scm.com/downloads">git installers</a> available as well.</p>
+<h2 id="distributing-an-entire-projectpaper">Distributing an entire project/paper</h2>
+<p>Somewhat of an open question currently. Some options:</p>
+<ol type="1">
+<li>Pack all data + paper repository (which includes code/analysis scripts) into a single container (Docker, Singularity?) and provide the container as the distributable.</li>
+<li>Pack paper repository into a container, but have a script included whose job it is to download the relevant data from some source.</li>
+<li>Other options?</li>
+</ol>
 <h2 id="faq">FAQ</h2>
 <p>Will fill this in as questions come up.</p>
 </body>
